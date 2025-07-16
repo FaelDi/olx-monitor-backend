@@ -3,7 +3,7 @@ package com.wordpress.faeldi.olx_monitor_backend;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.wordpress.faeldi.olx_monitor_backend", "com.example.saasmonitor"})
+@SpringBootApplication(scanBasePackages = "com.wordpress.faeldi.olx_monitor_backend")
 public class OlxMonitorBackendApplication {
 
 	public static void main(String[] args) {
