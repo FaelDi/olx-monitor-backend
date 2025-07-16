@@ -1,6 +1,6 @@
 package com.wordpress.faeldi.olx_monitor_backend.security;
 
-import com.wordpress.faeldi.olx_monitor_backend.model.User;
+import com.wordpress.faeldi.olx_monitor_backend.entity.User;
 import com.wordpress.faeldi.olx_monitor_backend.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,7 +26,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         return new org.springframework.security.core.userdetails.User(
                 user.getEmail(),
                 user.getPassword(),
-                List.of(new SimpleGrantedAuthority(user.getRole().name()))
+                List.of(new SimpleGrantedAuthority(user.getPlanType().name()))
         );
     }
 }
